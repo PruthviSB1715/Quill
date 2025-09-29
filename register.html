@@ -1,0 +1,164 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+    <title>Register - Quill</title>
+    <style>
+        .form-section {
+            /* Center the form content and give it vertical spacing */
+            min-height: calc(100vh - var(--nav-height) - 150px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .auth-form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border: 1px solid var(--grey-tint);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .auth-form-container h2 {
+            margin-bottom: 30px;
+            font-size: var(--text-h4);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: var(--text-base);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--grey-tint);
+            border-radius: 4px;
+            font-size: var(--text-base);
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary-base);
+            outline: none;
+            box-shadow: 0 0 0 3px var(--primary-tint);
+        }
+
+        .register-submit-btn {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .small-text-link {
+            display: block;
+            margin-top: 15px;
+            font-size: var(--text-sm);
+        }
+
+        .small-text-link a {
+            color: var(--primary-base);
+            font-weight: var(--font-weight-bold);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <a class="beta" href="index.html"><img class="logo-md" src="images/quill.svg" alt="quill logo"></a>
+                <ul class="nav-btn-container">
+                    <li><a class="btn btn-primary-outline" href="login.html">login</a></li>
+                    <li><a class="btn btn-primary" href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <div class="auth-form-container">
+                    <h2>Join Quill Today!</h2>
+                    <form action="/api/v1/auth/register" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Min. 8 characters" required minlength="8">
+                        </div>
+                        <button type="submit" class="btn btn-primary register-submit-btn">Create Account</button>
+                    </form>
+                    <p class="small-text-link">Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a href="index.html"><img class="logo-sm" src="images/quill.svg" alt="quill logo"></a>
+            <ul class="social-icons-container">
+                <li><a href="https://www.instagram.com/"><img class="social-icons" src="images/instagram.svg" alt="instagram logo"></a>
+                </li>
+                <li><a href="https://www.facebook.com/"><img class="social-icons" src="images/facebook.svg" alt="facebook logo"></a>
+                </li>
+                <li><a href="https://www.tiktok.com/"><img class="social-icons" src="images/tiktok.svg" alt="tiktok logo"></a></li>
+                <li><a href="https://www.linkedin.com/"><img class="social-icons" src="images/linkedin.svg" alt="linkedin logo"></a>
+                </li>
+                <li><a href="https://www.youtube.com/"><img class="social-icons" src="images/youtube.svg" alt="youtube logo"></a>
+                </li>
+            </ul>
+            <ul class="footer-links-container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+
+            <p class="small-text">Made by Pruthviraj</p>
+        </footer>
+    </div>
+
+    <div class="chat-container">
+        <img class="chat-icon" fill="#339af0" src="images/chat.svg" alt="chat icon">
+    </div>
+
+</body>
+
+</html>
