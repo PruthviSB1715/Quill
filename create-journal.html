@@ -1,48 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Journal</title>
-</head>
-<body>
-    <h1>Create Journal</h1>
-
-    <form action="/api/v1/journals" method="post">
-        
-        <label for="main-title">Journal Title</label>
-        <input id="main-title" type="text" name="title" placeholder="Enter title" minlength="3" required>
-
-        <br>
-
-        <label for="journal-catogory">Journal Category</label>
-        <select id="journal-catogory" name="category" required>
-            <option value="idea">Idea</option>
-            <option value="note">Note</option>
-            <option value="goal">Goal</option>
-            <option value="habit">Habit</option>
-            <option value="memory">Memory</option>
-            <option value="mood">Mood</option>
-            <option value="event">Event</option>
-            <option value="task">Task</option>
-        </select>
-
-        <br>
-
-        <label for="journal-entry">Journal Entry</label>
-        <textarea name=" entry" id="journal-entry" cols="30" rows="5" , minlength="10" required></textarea>
-
-        <br>
-
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,14 +10,14 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="queries.css">
-    <title>Create Journal - Quill</title>
+    <title>Create Journal</title>
     <style>
-        .journal-section {
+        .journal-section{
             padding: 50px 0 100px 0;
             min-height: calc(100vh - var(--nav-height) - 150px);
         }
 
-        .journal-container {
+        .journal-container{
             max-width: 800px;
             margin: 0 auto;
             padding: 40px;
@@ -70,18 +27,18 @@
             background-color: var(--white);
         }
 
-        .journal-container h1 {
+        .journal-container h1{
             margin-bottom: 30px;
             text-align: center;
             font-size: var(--text-h3);
-            color: var(--primary-shade);
+            color:var(--primary-shade);
         }
 
-        .journal-form-group {
+        .journal-form-group{
             margin-bottom: 25px;
         }
 
-        .journal-form-group label {
+        .journal-form-group label{
             display: block;
             margin-bottom: 8px;
             font-size: var(--text-paragraph);
@@ -103,32 +60,29 @@
 
         .journal-form-group input:focus,
         .journal-form-group select:focus,
-        .journal-form-group textarea:focus {
+        .journal-form-group textarea:focus{
             border-color: var(--primary-base);
             outline: none;
             box-shadow: 0 0 0 3px var(--primary-tint);
         }
 
-        .journal-form-group textarea {
+        .journal-form-group textarea{
             resize: vertical;
         }
 
-        /* Adjust the select font size to match inputs */
-        .journal-form-group select {
-            appearance: none; /* Remove default styling */
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23495057%22%20d%3D%22M287%2095.8L146.2%20236.6%205.4%2095.8z%22%2F%3E%3C%2Fsvg%3E');
+        .journal-form-group select{
+            appearance: none;
+            background-image:  url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23495057%22%20d%3D%22M287%2095.8L146.2%20236.6%205.4%2095.8z%22%2F%3E%3C%2Fsvg%3E');
             background-repeat: no-repeat;
             background-position: right 10px top 50%;
             background-size: 10px auto;
         }
 
-        .journal-submit-btn {
+        .journal-submit-btn{
             width: 100%;
-            /* Using the btn-primary class for styling */
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <header class="header">
@@ -144,18 +98,16 @@
         <main>
             <section class="journal-section">
                 <div class="journal-container">
-                    <h1>Create New Journal Entry</h1>
-
-                    <form action="/api/v1/journals" method="post">
-
+                    <h1>Create New Journal</h1>
+                    <form action="/api/v1/journals" method="POST">
                         <div class="journal-form-group">
                             <label for="main-title">Journal Title</label>
-                            <input id="main-title" type="text" name="title" placeholder="A meaningful title for your entry" minlength="3" required>
+                            <input type="text" id="main-title" name="title" placeholder="A meaningful title for your entry" minlength="3" required>
                         </div>
 
                         <div class="journal-form-group">
-                            <label for="journal-catogory">Journal Category</label>
-                            <select id="journal-catogory" name="category" required>
+                            <label for="journal-catogory">Journal Catogory</label>
+                            <select name="category" id="journal-catogory" required>
                                 <option value="" disabled selected>Select a category...</option>
                                 <option value="idea">Idea</option>
                                 <option value="note">Note</option>
@@ -205,7 +157,6 @@
     <div class="chat-container">
         <img class="chat-icon" fill="#339af0" src="images/chat.svg" alt="chat icon">
     </div>
-
+    </div>
 </body>
-
 </html>
